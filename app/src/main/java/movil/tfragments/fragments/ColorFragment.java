@@ -37,36 +37,39 @@ public class ColorFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_color
                 , container, false);
         txt = (TextView) v.findViewById(R.id.txt);
+        setColor(color);
         return v;
     }
 
     public void setColor(int color){
         this.color = color;
-        switch (color){
-            case COLOR_AZUL:
-                txt.setText(R.string.azul);
-                txt.setBackgroundResource(R.color.azul);
-                break;
-            case COLOR_AMARILLO:
-                txt.setText(R.string.amarillo);
-                txt.setBackgroundResource(R.color.amarillo);
-                break;
-            case COLOR_ROJO:
-                txt.setText(R.string.rojo);
-                txt.setBackgroundResource(R.color.rojo);
-                break;
-            case COLOR_VIOLETA:
-                txt.setText(R.string.violeta);
-                txt.setBackgroundResource(R.color.violeta);
-                break;
-            case COLOR_NARANJA:
-                txt.setText(R.string.naranja);
-                txt.setBackgroundResource(R.color.naranja);
-                break;
-            case COLOR_VERDE:
-                txt.setText(R.string.verde);
-                txt.setBackgroundResource(R.color.verde);
-                break;
+        if(txt != null) {
+            switch (color) {
+                case COLOR_AZUL:
+                    txt.setText(R.string.azul);
+                    txt.setBackgroundResource(R.color.azul);
+                    break;
+                case COLOR_AMARILLO:
+                    txt.setText(R.string.amarillo);
+                    txt.setBackgroundResource(R.color.amarillo);
+                    break;
+                case COLOR_ROJO:
+                    txt.setText(R.string.rojo);
+                    txt.setBackgroundResource(R.color.rojo);
+                    break;
+                case COLOR_VIOLETA:
+                    txt.setText(R.string.violeta);
+                    txt.setBackgroundResource(R.color.violeta);
+                    break;
+                case COLOR_NARANJA:
+                    txt.setText(R.string.naranja);
+                    txt.setBackgroundResource(R.color.naranja);
+                    break;
+                case COLOR_VERDE:
+                    txt.setText(R.string.verde);
+                    txt.setBackgroundResource(R.color.verde);
+                    break;
+            }
         }
     }
 
